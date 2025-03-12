@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="animated-background"></div> <!-- Background Effect -->
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <h2>Saurav Kunwar</h2>
+           
+        <h3>Computer Engineering Student | Web Development & Data Science Enthusiast</h3>
+            
+            
+           
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="me.jpg" alt="Profile Picture">
+            </div>
+            <div class="bio">
+                <p>
+                    Hi! I’m <strong>Saurav Kunwar</strong>, a dedicated Computer Engineering student at Tribhuvan University with a growing passion for <strong>web development</strong> and <strong>data science</strong>. 
+                    I enjoy designing and building simple, functional websites and exploring how data can be used to solve real-world problems. 
+                    I’m comfortable working with tools like <strong>HTML, CSS, JavaScript,</strong> and <strong>Python</strong>, and I’m currently learning frameworks like <strong>React</strong> and diving into data analysis with libraries such as <strong>Pandas</strong> and <strong>NumPy</strong>.
+                </p>
+            </div>
+        </div>
+    
+        <div class="skills-section">
+            <h3>Skills</h3>
+            <table>
+                <tr>
+                    <th>Web Development</th>
+                    <th>Data Science</th>
+                    <th>Tools</th>
+                    <th>Other</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Python</td>
+                    <td>Git</td>
+                    <td>Problem Solving</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Pandas</td>
+                    <td>VS Code</td>
+                    <td>Basic Algorithms</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>NumPy</td>
+                    <td>Jupyter Notebook</td>
+                    <td>Database Concepts</td>
+                </tr>
+                <tr>
+                    <td>Basics of React</td>
+                    <td>Basic Data Visualization</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="amazon.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Clone Webpage of Amazon</h3>
+                    <p>This was my first project using HTML and CSS where I made a clone webpage of Amazon. 
+                        This was a basic frontend project using HTML and CSS.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="portfolio.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>Interactive Portfolio</h3>
+                    <p>A personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>Email: <a href="mailto:saurabkunwar5@gmail.com">saurabkunwar5@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/saurav-kunwar" target="_blank">saurav-kunwar</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Address: Beldandi, Kanchanpur</p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <p>Instagram: <a href="https://www.instagram.com/_sauravvvvvvv" target="_blank">@_sauravvvvvvv</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <p>GitHub: <a href="https://github.com/sauravv-kunwar" target="_blank">sauravv-kunwar</a></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <style>
+        #contact {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        h2 {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+    
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    
+        .contact-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .contact-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+    
+        .contact-item i {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+    
+        .contact-item p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+    
+        .contact-item a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    
+       
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
