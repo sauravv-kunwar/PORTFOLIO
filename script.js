@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Smooth scrolling for nav links
     document.querySelectorAll("nav a").forEach(anchor => {
         anchor.addEventListener("click", (e) => {
             e.preventDefault();
@@ -35,24 +36,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Project Hover Effect
-    document.querySelectorAll(".project").forEach(project => {
-        project.addEventListener("mouseover", () => {
-            project.style.transform = "scale(1.05)";
-            project.style.transition = "0.3s";
-        });
-        project.addEventListener("mouseleave", () => {
-            project.style.transform = "scale(1)";
-        });
+    // Hamburger Menu for Mobile
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
     });
 
-    // Interactive Background Effect
+    // Bubble Background Animation
     const background = document.querySelector(".animated-background");
-    for (let i = 0; i < 50; i++) {
-        let bubble = document.createElement("span");
+
+    function createBubble() {
+        const bubble = document.createElement("div");
         bubble.classList.add("bubble");
-        bubble.style.left = Math.random() * 100 + "vw";
-        bubble.style.animationDuration = Math.random() * 5 + 3 + "s";
+        bubble.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+        bubble.style.width = Math.random() * 20 + 10 + "px"; // Random size
+        bubble.style.height = bubble.style.width; // Keep it circular
+        bubble.style.animationDuration = Math.random() * 5 + 3 + "s"; // Random speed
         background.appendChild(bubble);
+
+        // Remove bubble after animation ends
+        bubble.addEventListener("animationend", () => {
+            bubble.remove();
+        });
     }
+
+    // Generate bubbles at regular intervals
+    setInterval(createBubble, 300);
 });
